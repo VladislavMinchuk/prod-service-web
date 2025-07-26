@@ -1,3 +1,5 @@
+import { findDateStr } from "../helpers";
+
 export enum DayListActionsKind {
     SHOW_POPUP = 'SHOW_POPUP',
     HIDE_POPUP = 'HIDE_POPUP',
@@ -19,6 +21,7 @@ const dayListReducer = (state: IDayListItem[], action: DayListAction): IDayListI
 
     switch (type) {
         case DayListActionsKind.SET_LIST:
+            // return payload.map(day => ({ name: day, data: findDateStr(day), dayName: day.split(' ')[0], popupOpened: false })); // list of days
             return payload.map(day => ({ name: day, popupOpened: false })); // list of days
     
         case DayListActionsKind.SHOW_POPUP:

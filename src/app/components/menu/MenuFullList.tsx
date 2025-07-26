@@ -30,6 +30,7 @@ const MenuFullList: React.FC<MenuFullListProps> = ({ menuObject }) => {
             {dayList.length > 0 && 
                 <ul className="md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3">
                     { dayList.map(({ name: dayName, popupOpened }, index) => {
+                    // { dayList.map(({ name: fullDayName, data, dayName, popupOpened }, index) => {
                         return <li key={index} className="p-2 md:p-4 mb-4 border-2">
                             <div className="flex justify-between">
                                 <span className="font-bold mr-2">{dayName}</span>
